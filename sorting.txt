@@ -34,7 +34,7 @@ void display(int *n,int stack[size])
     ele2=stack[j-1];
     if(ele1<ele2)
     {stack[j]=ele2;
-    stack[j-1]=ele1;
+    stack[j-1]=ele1; 
     }
 
    }
