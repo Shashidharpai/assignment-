@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+#define size 100
+
+void main()
+{
+  int i=0,n,j=0,ele1,ele2,stack[size];
+  clrscr();
+  printf(" enter the nuber  contents of stack:");
+  scanf("%d",&n);for(i=0;i<n;i++)
+ {
+  printf("enter the stack content %d",(i+1));
+  scanf("%d",&stack[i]);
+ }
+  for(i=n-1;i>0;i--)
+ {
+    for(j=n-1;j>(n-1-i);j--)
+   {
+    ele1=stack[j];
+    ele2=stack[j-1];
+    if(ele1<ele2)
+    {stack[j]=ele2;
+    stack[j-1]=ele1;
+    }
+
+   }
+
+ }
+ printf("the stack after arranging is:");
+ for(i=0;i<n;i++)
+ {printf("%d",stack[i]);
+ printf("\n");
+ }
+ getch();
+ }
